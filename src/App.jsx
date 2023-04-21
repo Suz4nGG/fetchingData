@@ -1,11 +1,12 @@
 import { API_URL } from './constants'
 import { useFetch } from './hooks/useFetch'
-// import { useFetchController } from './hooks/useFetchController'
+import { useFetchController } from './hooks/useFetchController'
 // import { Suspense } from 'react'
 
 function App () {
   // const APIData = useFetchController(API_URL)
-  const { data, loading, error, handleCancelRequest } = useFetch(API_URL)
+  const { data, loading, error, handleCancelRequest } =
+    useFetchController(API_URL)
   // const dataRead = APIData.read()
 
   return (
